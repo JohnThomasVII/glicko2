@@ -35,8 +35,8 @@ def data_input(num):
     ''')
     st.number_input(
         label='Input rating',
-        min_value=500,
-        max_value=5000,
+        min_value=0,
+        max_value=10000,
         key=f'rating{num}'
     )
     st.number_input(
