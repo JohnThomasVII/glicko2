@@ -47,7 +47,7 @@ def data_input(num):
     )
     st.number_input(
         label='Input volatility',
-        min_value=0.00001,
+        min_value=0.001,
         max_value=1000,
         step=0.00001,
         format="%.8f",
