@@ -1,6 +1,8 @@
 """
 glicko2calculator.py
+
 A streamlit web app used to calculate glicko2 rating between two players.
+
 """
 
 __version__ = '1.0.0'
@@ -46,7 +48,7 @@ def data_input(num):
     st.number_input(
         label='Input volatility',
         min_value=0.001,
-        max_value=1,
+        max_value=1000.,
         step=0.00001,
         format="%.8f",
         key=f'vola{num}'
