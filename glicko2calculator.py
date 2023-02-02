@@ -76,6 +76,7 @@ def main():
         label='Input TAU',
         min_value=0,
         max_value=3,
+        step=0.001,
         key='tau',
         help='default=0.5, min=0.1, max=3.0'
     )
