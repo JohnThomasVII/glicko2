@@ -36,6 +36,7 @@ def data_input(num):
     st.number_input(
         label='Input rating',
         min_value=0,
+        max_value=10000,
         key=f'rating{num}'
     )
     st.number_input(
@@ -74,9 +75,8 @@ def main():
 
     st.sidebar.slider(
         label='Input TAU',
-        min_value=0,
+        min_value=0.1,
         max_value=3,
-        step=0.001,
         key='tau',
         help='default=0.5, min=0.1, max=3.0'
     )
