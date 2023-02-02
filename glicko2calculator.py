@@ -35,21 +35,14 @@ def data_input(num):
     ''')
     st.number_input(
         label='Input rating',
-        min_value=500,
-        max_value=5000,
         key=f'rating{num}'
     )
     st.number_input(
         label='Input rd',
-        min_value=0,
-        max_value=350,
         key=f'rd{num}'
     )
     st.number_input(
         label='Input volatility',
-        min_value=0.001,
-        max_value=1.,
-        step=0.00001,
         format="%.8f",
         key=f'vola{num}'
     )
@@ -66,11 +59,11 @@ def rating_update(p, num):
 
 def main():
     if not 'tau' in st.session_state:
-        st.session_state.tau = 0.5
+        st.session_state.tau = 1
     if not 'rating1' in st.session_state:
-        st.session_state.rating1 = 1500
+        st.session_state.rating1 = 1000
     if not 'rating2' in st.session_state:
-        st.session_state.rating2 = 1500
+        st.session_state.rating2 = 1000
     if not 'rd1' in st.session_state:
         st.session_state.rd1 = 350
     if not 'rd2' in st.session_state:
@@ -78,8 +71,8 @@ def main():
 
     st.sidebar.slider(
         label='Input TAU',
-        min_value=0.1,
-        max_value=3.0,
+        min_value=0,
+        max_value=1000,
         key='tau',
         help='default=0.5, min=0.1, max=3.0'
     )
