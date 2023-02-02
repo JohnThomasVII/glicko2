@@ -24,9 +24,9 @@ st.set_page_config(
 
 
 if not 'vola1' in st.session_state:
-    st.session_state.vola1 = 0.06
+    st.session_state.vola1 = 0.10
 if not 'vola2' in st.session_state:
-    st.session_state.vola2 = 0.06
+    st.session_state.vola2 = 0.10
 
 
 def data_input(num):
